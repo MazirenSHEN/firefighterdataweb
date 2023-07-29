@@ -1,0 +1,18 @@
+1. extract from originalpython test
+2. download and install xampp
+3. download and install nodejs
+4. install python (if pc dont have)
+5. pip install flask (install a flask module into python)
+6. pip install flask_mysqldb (install a flask module into python)
+7. pip install flask_cors (install a flask module into python)
+8. go into "react" folder
+9. npm install
+10. npm run start (starting react web)
+11. open another terminal / powershell
+12. go into "python" folder
+13. python mysql.py 9 (starting python server)
+
+14. to start mysql in localhost
+15. open xampp
+16. start apache, mysql
+17. press admin to see
