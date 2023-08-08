@@ -67,28 +67,30 @@ def loaddata():
         for i in range(len(data1['Id'])):
             user_info = {
                 0: data1['Id'][i],
-                1: data1['acc_x'][i],
-                2: data1['acc_y'][i],
-                3: data1['acc_z'][i],
-                4: data1['gyro_x'][i],
-                5: data1['gyro_y'][i],
-                6: data1['gyro_z'][i],
-                7: data1['EMG'][i],
-                8: data1['Seq'][i]
+                1: data1['timestamp'][i],
+                2: data1['acc_x'][i],
+                3: data1['acc_y'][i],
+                4: data1['acc_z'][i],
+                5: data1['gyro_x'][i],
+                6: data1['gyro_y'][i],
+                7: data1['gyro_z'][i],
+                8: data1['EMG'][i],
+                9: data1['Seq'][i]
 
             }
             print(user_info)
-            acc_x = user_info[1]
-            acc_y = user_info[2]
-            acc_z = user_info[3]
-            gyro_x = user_info[4]
-            gyro_y = user_info[5]
-            gyro_z = user_info[6]
-            EMG = user_info[7]
-            Seq = user_info[8]
+            timestamp = user_info[1]
+            acc_x = user_info[2]
+            acc_y = user_info[3]
+            acc_z = user_info[4]
+            gyro_x = user_info[5]
+            gyro_y = user_info[6]
+            gyro_z = user_info[7]
+            EMG = user_info[8]
+            Seq = user_info[9]
             cursor.execute(
-                ''''''''' INSERT INTO leftarm (acc_x,acc_y,acc_z,gyro_x,gyro_y,gyro_z,EMG,Seq) VALUES(%s,%s,%s,%s,%s,%s,%s,%s)''''''''',
-                (acc_x, acc_y, acc_z, gyro_x, gyro_y, gyro_z, EMG, Seq))
+               ''''''''' INSERT INTO leftarm (timestamp,acc_x,acc_y,acc_z,gyro_x,gyro_y,gyro_z,EMG,Seq) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s)''''''''',
+               (timestamp,acc_x, acc_y, acc_z, gyro_x, gyro_y, gyro_z, EMG, Seq))
             mysql.connection.commit()
             print(user_info)
 
